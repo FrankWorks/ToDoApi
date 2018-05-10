@@ -18,4 +18,4 @@ RUN dotnet publish -c Release -o /app
 FROM frankfax/dotnet-docker-samples:Arm32
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "ToDoApi.dll"]
+ENTRYPOINT ["dotnet", "ToDoApi.dll"] 
