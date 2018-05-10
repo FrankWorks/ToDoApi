@@ -12,7 +12,7 @@ WORKDIR /src/ToDoApi
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish -c Release -o out -r linux-arm /app
+RUN dotnet publish -c Release -o /app -r linux-arm 
 
 #FROM base AS final
 FROM frankfax/dotnet-docker-samples:Arm32
